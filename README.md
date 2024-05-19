@@ -1,5 +1,5 @@
-# Data-analysis-projects
-Just a girl who tries to find answers in data. Here are repository and visulizations of all my data analysis projects.
+# Data-analytics-projects
+Just a girl who tries to find answers in data, I use Python to collect, process, and visualize the data. Here is a repository and visualizations of all my data analysis projects.
 
 # Menstrual cycle analysis
 This analysis focuses on the duration of cycles and periods, as well as the recurrence of symptoms. Probabilities of symptom occurrence are also calculated:
