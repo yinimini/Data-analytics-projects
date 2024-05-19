@@ -13,7 +13,7 @@ Code file 2:[https://github.com/yinimini/Data-analysis-projects/blob/main/Menstr
 ![Probabilities_of_symptom_occurrence](https://github.com/yinimini/Data-analysis-projects/assets/32144515/2f8d5179-62d0-40fb-b715-b1a454b2750b)
 
 # Frequency Delta Sigma Modulator (FDSM) performance analysis
-This analysis focuses on FDSM's performace parameters in both frequency and time domains, here are some of the visulizations:
+This analysis focuses on FDSM's performace parameters in both frequency and time domains, here are some of the visualization:
 
 Code: [https://github.com/yinimini/Data-analysis-projects/blob/main/FDSM_performance_analysis/FFT_1.py]
 
