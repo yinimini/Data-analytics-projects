@@ -2,7 +2,7 @@
 Just a girl who tries to find answers in data, I use Python to collect, process, and visualize the data. Here is a repository and visualizations of all my data analysis projects.
 
 # Menstrual cycle analysis
-This analysis focuses on the duration of cycles and periods, as well as the recurrence of symptoms. Probabilities of symptom occurrence are also calculated:
+This project involves collecting and modifying data, as well as visualizing it. The analysis focuses on the duration of cycles and periods, as well as the recurrence of symptoms. Probabilities of symptom occurrence are also calculated:
 
 Code file 1:[https://github.com/yinimini/Data-analysis-projects/blob/main/Menstrual_cycle_analysis/Cycle_length.py]
 
@@ -13,7 +13,7 @@ Code file 2:[https://github.com/yinimini/Data-analysis-projects/blob/main/Menstr
 ![Probabilities_of_symptom_occurrence](https://github.com/yinimini/Data-analysis-projects/assets/32144515/2f8d5179-62d0-40fb-b715-b1a454b2750b)
 
 # Frequency Delta Sigma Modulator (FDSM) performance analysis
-This analysis focuses on FDSM's performace parameters in both frequency and time domains, here are some of the visualization:
+This project involves collecting and cleansing data, as well as visualizing it. This analysis focuses on FDSM's performace parameters in both frequency and time domains, here are some of the visualization:
 
 Code: [https://github.com/yinimini/Data-analysis-projects/blob/main/FDSM_performance_analysis/FFT_1.py]
 
