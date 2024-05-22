@@ -22,8 +22,8 @@ This project involves collecting and cleansing data, as well as visualizing it. 
 Code: [https://github.com/yinimini/Data-analysis-projects/blob/main/FDSM_performance_analysis/FFT_1.py]
 
 ![blackman_zoomedin_1](https://github.com/yinimini/Data-analysis-projects/assets/32144515/dd2ee323-a03d-4541-849b-a2ca76be7249)
-![tt_27](https://git![VTC_INV](https://github.com/yinimini/Data-analysis-projects/assets/32144515/2512215e-cec4-4dc4-b34f-94a26fdc8f6d)
 ![VTC_INV](https://github.com/yinimini/Data-analysis-projects/assets/32144515/503f5545-40ab-4f82-8c60-04e622527002)
 ![fft_db_right](https://github.com/yinimini/Data-analysis-projects/assets/32144515/f55befed-3441-4e3c-8c43-b2483786e2ca)
 ![compared_linearity](https://github.com/yinimini/Data-analysis-projects/assets/32144515/da50c3c8-fdd6-43e5-9f98-d7fcf940a127)
+![tt_27](https://github.com/yinimini/Data-analysis-projects/assets/32144515/5a2bae51-156a-4612-bdd2-aa47d08dbd37)
 
