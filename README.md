@@ -14,6 +14,14 @@ Code file 2:[https://github.com/yinimini/Data-analysis-projects/blob/main/Menstr
 ![Recurrence of symptoms](https://github.com/yinimini/Data-analysis-projects/assets/32144515/9079f102-9149-48bb-b96b-a2d92b0fa582)
 ![Probabilities_of_symptom_occurrence](https://github.com/yinimini/Data-analysis-projects/assets/32144515/2f8d5179-62d0-40fb-b715-b1a454b2750b)
 
+# Sales report analysis
+Tool: Power BI
+
+This project shows core visualizations including a table to track product sales and delivery status, a column chart highlighting revenue-generating product categories, and a line chart providing insight into sales trends. Additionally, KPIs are developed to gauge sales performance and customer reach.
+
+![sales_report_dashboard](https://github.com/yinimini/Data-analysis-projects/assets/32144515/175e933f-969e-481b-ad53-386cc570ba32)
+
+
 # Frequency Delta Sigma Modulator (FDSM) performance analysis
 Tool: Python 
 
