@@ -1,5 +1,5 @@
 # Data-analytics-projects
-Just a girl who tries to find answers in data, I use Python to collect, process, and visualize the data. Here is a repository and visualizations of all my data analysis projects.
+Just a girl who tries to find answers in data, I use Python and Power BI to collect, process, and visualize the data. Here is a repository and visualizations of all my data analysis projects.
 
 # Menstrual cycle analysis
 Tool: Python
