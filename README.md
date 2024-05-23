@@ -4,7 +4,13 @@ Just a girl who tries to find answers in data, I use Python and Power BI to coll
 # Menstrual cycle analysis
 Tool: Python
 
-This project involves collecting and modifying data, as well as visualizing it. The analysis focuses on the duration of cycles and periods, as well as the recurrence of symptoms. Probabilities of symptom occurrence are also calculated:
+I wondered: What symptoms am I getting during my cycles?
+
+How long are my cycles and are the durations in the 'normal' range?
+
+What's the probabilities of getting the symptoms again? 
+
+I collected and modified the raw data, and visualized my questions with Python. The analysis focuses on the duration of cycles and periods, as well as the recurrence of symptoms. Probabilities of symptom occurrence are also calculated:
 
 Code file 1:[https://github.com/yinimini/Data-analysis-projects/blob/main/Menstrual_cycle_analysis/Cycle_length.py]
 
