@@ -31,7 +31,7 @@ This project shows core visualizations including a table to track product sales 
 # Frequency Delta Sigma Modulator (FDSM) performance analysis
 Tool: Python 
 
-This project involves collecting and cleansing data, as well as visualizing it. This analysis focuses on FDSM's performace parameters in both frequency and time domains, here are some of the visualization:
+This project involves collecting and cleansing data, as well as visualizing it. This analysis focuses on FDSM's performace parameters such as linearity, SQNR and inverter switching time in both frequency and time domains, here are some of the visualization:
 
 Code: [https://github.com/yinimini/Data-analysis-projects/blob/main/FDSM_performance_analysis/FFT_1.py]
 
