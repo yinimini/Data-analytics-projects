@@ -27,15 +27,16 @@ Tool: Power BI
 
 I wonder: 
 
-1) What's the relationship between psychological disorders and STEM students' performance at school?
+1) What's the relationship between psychological disorders and STEM students' grades?
 
-2) What are the factors that could contribute to the formation of a psychological disorder, and what further impact does it have on students' performance at school?
+2) What are the factors that could contribute to the formation of a psychological disorder, and what further impact does it have on students' grades?
 
 I collected three different datasets fra Kaggle, mind that these datasets are probably not big enough to present accurate results, but it does reflect some of the aspect in the problems. 
 
 Power BI file:[https://github.com/yinimini/Data-analysis-projects/blob/main/Mental_health_disorder_analysis/Mental_health_analysis.pbix]
 
-![stem_mental_health](https://github.com/yinimini/Data-analysis-projects/assets/32144515/1cd0e17c-2875-4f01-83bf-c096133289cf)
+![stem_mental_health](https://github.com/yinimini/Data-analysis-projects/assets/32144515/fbc4dfcc-a111-4085-bedf-d12c2f698316)
+
 
 # Frequency Delta Sigma Modulator (FDSM) performance analysis
 Tool: Python 
