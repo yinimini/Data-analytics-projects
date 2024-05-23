@@ -1,14 +1,16 @@
 # Data-analytics-projects
-Just a girl who tries to find answers in data, I use Python and Power BI to collect, process, and visualize the data. Here is a repository and visualizations of some of my data analysis projects (The ones that I'm passionate about hehe).
+Just a girl who tries to find answers in data, I use Python and Power BI to collect, process, and visualize the data. Here is a repository and visualizations of some of my data analysis projects (The ones that I'm most passionate about hehe).
 
 # Menstrual cycle analysis
 Tool: Python
 
-I wondered: What symptoms am I getting during my cycles and when am I getting them in the cycles?
+I wondered: 
 
-How long are my cycles and are the durations in the 'normal' range?
+1) What symptoms am I getting during my cycles and when am I getting them in the cycles?
 
-What's the probabilities of getting the symptoms again? 
+2) How long are my cycles and are the durations in the 'normal' range?
+
+3) What's the probabilities of getting the symptoms again? 
 
 I collected and modified the raw data, and visualized my questions with Python. The analysis focuses on the duration of cycles and periods, as well as the recurrence of symptoms. Probabilities of symptom occurrence are also calculated:
 
@@ -23,13 +25,18 @@ Code file 2:[https://github.com/yinimini/Data-analysis-projects/blob/main/Menstr
 # Student Mental Health Analysis
 Tool: Power BI
 
-I wonder: What's the relationship between psychological disorders and STEM students' performance at school?
+I wonder: 
 
-What are the factors that could contribute to the formation of a psychological disorder, and what further impact does it have on students' performance at school?
+1) What's the relationship between psychological disorders and STEM students' grades?
+
+2) What are the factors that could contribute to the formation of a psychological disorder, and what further impact does it have on students' grades?
 
 I collected three different datasets fra Kaggle, mind that these datasets are probably not big enough to present accurate results, but it does reflect some of the aspect in the problems. 
 
-![stem_mental_health](https://github.com/yinimini/Data-analysis-projects/assets/32144515/1cd0e17c-2875-4f01-83bf-c096133289cf)
+Power BI file:[https://github.com/yinimini/Data-analysis-projects/blob/main/Mental_health_disorder_analysis/Mental_health_analysis.pbix]
+
+![stem_mental_health](https://github.com/yinimini/Data-analysis-projects/assets/32144515/fbc4dfcc-a111-4085-bedf-d12c2f698316)
+
 
 # Frequency Delta Sigma Modulator (FDSM) performance analysis
 Tool: Python 
