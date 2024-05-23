@@ -1,5 +1,5 @@
 # Data-analytics-projects
-Just a girl who tries to find answers in data, I use Python and Power BI to collect, process, and visualize the data. Here is a repository and visualizations of all my data analysis projects.
+Just a girl who tries to find answers in data, I use Python and Power BI to collect, process, and visualize the data. Here is a repository and visualizations of some of my data analysis projects (The ones that I'm passionate about hehe).
 
 # Menstrual cycle analysis
 Tool: Python
@@ -20,13 +20,16 @@ Code file 2:[https://github.com/yinimini/Data-analysis-projects/blob/main/Menstr
 ![Recurrence of symptoms](https://github.com/yinimini/Data-analysis-projects/assets/32144515/9079f102-9149-48bb-b96b-a2d92b0fa582)
 ![Probabilities_of_symptom_occurrence](https://github.com/yinimini/Data-analysis-projects/assets/32144515/2f8d5179-62d0-40fb-b715-b1a454b2750b)
 
-# Sales report analysis
+# Student Mental Health Analysis
 Tool: Power BI
 
-This project shows core visualizations including a table to track product sales and delivery status, a column chart highlighting revenue-generating product categories, and a line chart providing insight into sales trends. Additionally, KPIs are developed to gauge sales performance and customer reach.
+I wonder: What's the relationship between psychological disorders and STEM students' performance at school?
 
-![sales_report_dashboard](https://github.com/yinimini/Data-analysis-projects/assets/32144515/175e933f-969e-481b-ad53-386cc570ba32)
+What are the factors that could contribute to the formation of a psychological disorder, and what further impact does it have on students' performance at school?
 
+I collected three different datasets fra Kaggle, mind that these datasets are probably not big enough to present accurate results, but it does reflect some of the aspect in the problems. 
+
+![stem_mental_health](https://github.com/yinimini/Data-analysis-projects/assets/32144515/1cd0e17c-2875-4f01-83bf-c096133289cf)
 
 # Frequency Delta Sigma Modulator (FDSM) performance analysis
 Tool: Python 
