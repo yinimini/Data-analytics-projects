@@ -4,7 +4,7 @@ Just a girl who tries to find answers in data, I use Python and Power BI to coll
 # Menstrual cycle analysis
 Tool: Python
 
-I wondered: What symptoms am I getting during my cycles?
+I wondered: What symptoms am I getting during my cycles and when am I getting them in the cycles?
 
 How long are my cycles and are the durations in the 'normal' range?
 
