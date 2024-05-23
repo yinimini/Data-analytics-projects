@@ -4,11 +4,13 @@ Just a girl who tries to find answers in data, I use Python and Power BI to coll
 # Menstrual cycle analysis
 Tool: Python
 
-I wondered: What symptoms am I getting during my cycles and when am I getting them in the cycles?
+I wondered: 
 
-How long are my cycles and are the durations in the 'normal' range?
+1) What symptoms am I getting during my cycles and when am I getting them in the cycles?
 
-What's the probabilities of getting the symptoms again? 
+2) How long are my cycles and are the durations in the 'normal' range?
+
+3) What's the probabilities of getting the symptoms again? 
 
 I collected and modified the raw data, and visualized my questions with Python. The analysis focuses on the duration of cycles and periods, as well as the recurrence of symptoms. Probabilities of symptom occurrence are also calculated:
 
@@ -23,10 +25,11 @@ Code file 2:[https://github.com/yinimini/Data-analysis-projects/blob/main/Menstr
 # Student Mental Health Analysis
 Tool: Power BI
 
+I wonder: 
 
-I wonder: What's the relationship between psychological disorders and STEM students' performance at school?
+1) What's the relationship between psychological disorders and STEM students' performance at school?
 
-What are the factors that could contribute to the formation of a psychological disorder, and what further impact does it have on students' performance at school?
+2) What are the factors that could contribute to the formation of a psychological disorder, and what further impact does it have on students' performance at school?
 
 I collected three different datasets fra Kaggle, mind that these datasets are probably not big enough to present accurate results, but it does reflect some of the aspect in the problems. 
 
