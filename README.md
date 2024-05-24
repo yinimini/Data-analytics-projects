@@ -1,5 +1,5 @@
 # Data-analytics-projects
-Just a girl who tries to find answers in data, I use Python and Power BI to collect, process, and visualize the data. Here is a repository and visualizations of some of my data analysis projects (The ones that I'm most passionate about hehe).
+About me: Just a curious girl who tries to find answers in data, I mainly use Python and Power BI to collect, process, and visualize the data. Here is a repository and visualizations of some of my data analysis projects (The ones that I'm most passionate about hehe).
 
 # Menstrual cycle analysis
 Tool: Python
@@ -41,7 +41,13 @@ Power BI file:[https://github.com/yinimini/Data-analysis-projects/blob/main/Ment
 # Frequency Delta Sigma Modulator (FDSM) performance analysis
 Tool: Python 
 
-This project involves collecting and cleansing data, as well as visualizing it. This analysis focuses on FDSM's performace parameters such as linearity, SQNR and inverter switching time in both frequency and time domains, here are some of the visualization:
+I wondered:
+
+Does this modulator work at all, if so, does it behave like a oversampling converter as it should?
+
+How well does this modulator perform, and how does its performance compare to that of other oversampling converters in the research field?
+
+I collected the large data file from the modulator, rinsed the data that includes the offset, then visualized the results in both time and frequency domains. I also calculated and visualized performance parameters such as linearity, SQNR, SINAD, THD, and gate switching time.
 
 Code: [https://github.com/yinimini/Data-analysis-projects/blob/main/FDSM_performance_analysis/FFT_1.py]
 
