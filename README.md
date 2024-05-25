@@ -18,9 +18,9 @@ Code file 1:[https://github.com/yinimini/Data-analysis-projects/blob/main/Menstr
 
 Code file 2:[https://github.com/yinimini/Data-analysis-projects/blob/main/Menstrual_cycle_analysis/symp_analysis.py]
 
- <img src="https://github.com/yinimini/Data-analysis-projects/assets/32144515/2a6e4681-1a51-4b51-951a-bb8181fa56b9" width="700">
- <img src="https://github.com/yinimini/Data-analysis-projects/assets/32144515/9079f102-9149-48bb-b96b-a2d92b0fa582" width="700">
-  <img src="https://github.com/yinimini/Data-analysis-projects/assets/32144515/2f8d5179-62d0-40fb-b715-b1a454b2750b" width="700">
+ <img src="https://github.com/yinimini/Data-analysis-projects/assets/32144515/2a6e4681-1a51-4b51-951a-bb8181fa56b9" width="500">
+ <img src="https://github.com/yinimini/Data-analysis-projects/assets/32144515/9079f102-9149-48bb-b96b-a2d92b0fa582" width="500">
+ <img src="https://github.com/yinimini/Data-analysis-projects/assets/32144515/2f8d5179-62d0-40fb-b715-b1a454b2750b" width="600">
 
 # Student Mental Health Analysis
 Tool: Power BI
@@ -51,10 +51,10 @@ I collected the large data file from the modulator, rinsed the data that include
 
 Code: [https://github.com/yinimini/Data-analysis-projects/blob/main/FDSM_performance_analysis/FFT_1.py]
 
-<img src="https://github.com/yinimini/Data-analysis-projects/assets/32144515/dd2ee323-a03d-4541-849b-a2ca76be7249" width="500"> 
-<img src="https://github.com/yinimini/Data-analysis-projects/assets/32144515/503f5545-40ab-4f82-8c60-04e622527002" width="500">
-<img src="https://github.com/yinimini/Data-analysis-projects/assets/32144515/f55befed-3441-4e3c-8c43-b2483786e2ca" width="500"> 
-<img src="https://github.com/yinimini/Data-analysis-projects/assets/32144515/da50c3c8-fdd6-43e5-9f98-d7fcf940a127" width="700"> 
+<img src="https://github.com/yinimini/Data-analysis-projects/assets/32144515/dd2ee323-a03d-4541-849b-a2ca76be7249" width="400"> 
+<img src="https://github.com/yinimini/Data-analysis-projects/assets/32144515/503f5545-40ab-4f82-8c60-04e622527002" width="400">
+<img src="https://github.com/yinimini/Data-analysis-projects/assets/32144515/f55befed-3441-4e3c-8c43-b2483786e2ca" width="400"> 
+<img src="https://github.com/yinimini/Data-analysis-projects/assets/32144515/da50c3c8-fdd6-43e5-9f98-d7fcf940a127" width="600"> 
 
 
 
