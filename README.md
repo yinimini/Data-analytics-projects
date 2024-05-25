@@ -22,14 +22,16 @@ Code file 2:[https://github.com/yinimini/Data-analysis-projects/blob/main/Menstr
  <img src="https://github.com/yinimini/Data-analysis-projects/assets/32144515/9079f102-9149-48bb-b96b-a2d92b0fa582" width="500">
  <img src="https://github.com/yinimini/Data-analysis-projects/assets/32144515/2f8d5179-62d0-40fb-b715-b1a454b2750b" width="600">
 
-# Student Mental Health Analysis
+# Mental Health Disorders Analysis
 Tool: Power BI
 
 I wonder: 
 
-1) What's the relationship between psychological disorders and STEM students' grades?
+1) How are the mental health situations in China and Norway over the years?
 
-2) What are the factors that could contribute to the formation of a psychological disorder, and what further impact does it have on students' grades?
+2) What's the relationship between psychological disorders and STEM students' grades?
+
+3) What are the factors that could contribute to the formation of a psychological disorder, and what further impact does it have on students' grades?
 
 I collected three different datasets fra Kaggle, mind that these datasets are probably not big enough to present accurate results, but it does reflect some of the aspect in the problems. 
 
