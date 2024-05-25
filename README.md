@@ -51,7 +51,7 @@ I collected the large data file from the modulator, rinsed the data that include
 
 Code: [https://github.com/yinimini/Data-analysis-projects/blob/main/FDSM_performance_analysis/FFT_1.py]
 
-<img src="https://github.com/yinimini/Data-analysis-projects/assets/32144515/dd2ee323-a03d-4541-849b-a2ca76be7249" width="400"> 
+<img src="https://github.com/yinimini/Data-analysis-projects/assets/32144515/dd2ee323-a03d-4541-849b-a2ca76be7249" width="380"> 
 <img src="https://github.com/yinimini/Data-analysis-projects/assets/32144515/503f5545-40ab-4f82-8c60-04e622527002" width="400">
 <img src="https://github.com/yinimini/Data-analysis-projects/assets/32144515/f55befed-3441-4e3c-8c43-b2483786e2ca" width="400"> 
 <img src="https://github.com/yinimini/Data-analysis-projects/assets/32144515/da50c3c8-fdd6-43e5-9f98-d7fcf940a127" width="600"> 
