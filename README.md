@@ -37,6 +37,8 @@ I collected three different datasets fra Kaggle, mind that these datasets are pr
 
 Power BI file:[https://github.com/yinimini/Data-analysis-projects/blob/main/Mental_health_disorder_analysis/Mental_health_analysis.pbix]
 
+![Mental_health_in_china_norway](https://github.com/yinimini/Data-analysis-projects/assets/32144515/74597600-5d17-40db-89f7-b1acc9cfc871)
+
 ![stem_mental_health](https://github.com/yinimini/Data-analysis-projects/assets/32144515/fbc4dfcc-a111-4085-bedf-d12c2f698316)
 
 
