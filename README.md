@@ -72,7 +72,7 @@ I wondered:
 
 3) What is the order status for each product, and how can we leverage this information to optimize inventory management?
 
-Power BI file:
+Power BI file: [https://github.com/yinimini/Data-analysis-projects/blob/main/Sales_report_analysis/sales_report.pbix]
 
  <img src="https://github.com/yinimini/Data-analysis-projects/assets/32144515/bf1dff40-7a54-4a2f-a7f7-12b354d3ec20" width="600">
 
