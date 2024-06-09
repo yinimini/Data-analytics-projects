@@ -61,8 +61,8 @@ Code: [https://github.com/yinimini/Data-analysis-projects/blob/main/FDSM_perform
 <img src="https://github.com/yinimini/Data-analysis-projects/assets/32144515/da50c3c8-fdd6-43e5-9f98-d7fcf940a127" width="600"> 
 
 
-# Sales report of a bicycle shop
-Tool: Python
+# Sales Report of a Bicycle Store
+Tool: Power BI
 
 I wondered: 
 
