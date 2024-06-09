@@ -1,5 +1,5 @@
 # Data-analytics-projects
-About me: Just a curious girl who tries to find answers in data, I mainly use Python and Power BI to collect, process, and visualize the data. Here is a repository and visualizations of some of my data analysis projects (The ones that I'm most passionate about hehe).
+About me: Just a curious girl who tries to find answers in data, I mainly use Python and Power BI to collect, process, and visualize the data. Here is a repository and visualizations of some of my data analysis projects.
 
 # Menstrual cycle analysis
 Tool: Python
