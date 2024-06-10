@@ -39,7 +39,6 @@ Power BI file:[https://github.com/yinimini/Data-analysis-projects/blob/main/Ment
 
  <img src="https://github.com/yinimini/Data-analysis-projects/assets/32144515/74597600-5d17-40db-89f7-b1acc9cfc871" width="700">
  <img src="https://github.com/yinimini/Data-analysis-projects/assets/32144515/fbc4dfcc-a111-4085-bedf-d12c2f698316" width="700">
- <img src="https://github.com/yinimini/Data-analysis-projects/assets/32144515/e26d71f9-6538-48a2-bca2-3ec75a11c213" width="700">
 
 # Frequency Delta Sigma Modulator (FDSM) performance analysis
 Tool: Python 
