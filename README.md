@@ -37,10 +37,8 @@ I collected three different datasets fra Kaggle, mind that these datasets are pr
 
 Power BI file:[https://github.com/yinimini/Data-analysis-projects/blob/main/Mental_health_disorder_analysis/Mental_health_analysis.pbix]
 
-![Mental_health_in_china_norway](https://github.com/yinimini/Data-analysis-projects/assets/32144515/74597600-5d17-40db-89f7-b1acc9cfc871)
-
-![stem_mental_health](https://github.com/yinimini/Data-analysis-projects/assets/32144515/fbc4dfcc-a111-4085-bedf-d12c2f698316)
-
+ <img src="https://github.com/yinimini/Data-analysis-projects/assets/32144515/74597600-5d17-40db-89f7-b1acc9cfc871" width="700">
+ <img src="https://github.com/yinimini/Data-analysis-projects/assets/32144515/fbc4dfcc-a111-4085-bedf-d12c2f698316" width="700">
 
 # Frequency Delta Sigma Modulator (FDSM) performance analysis
 Tool: Python 
@@ -61,8 +59,8 @@ Code: [https://github.com/yinimini/Data-analysis-projects/blob/main/FDSM_perform
 <img src="https://github.com/yinimini/Data-analysis-projects/assets/32144515/da50c3c8-fdd6-43e5-9f98-d7fcf940a127" width="600"> 
 
 
-# Sales report of a bicycle shop
-Tool: Python
+# Sales Report of a Bicycle Store
+Tool: Power BI
 
 I wondered: 
 
@@ -72,7 +70,7 @@ I wondered:
 
 3) What is the order status for each product, and how can we leverage this information to optimize inventory management?
 
-Power BI file:
+Power BI file: [https://github.com/yinimini/Data-analysis-projects/blob/main/Sales_report_analysis/sales_report.pbix]
 
  <img src="https://github.com/yinimini/Data-analysis-projects/assets/32144515/bf1dff40-7a54-4a2f-a7f7-12b354d3ec20" width="600">
 
