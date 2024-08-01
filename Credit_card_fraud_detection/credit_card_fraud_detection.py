@@ -184,9 +184,8 @@ plt.show()
 
 #Training Time Comparison
 models = ['Decision Tree', 'SVM']
-sklearn_times = [sklearn_time_dtc, sklearn_time_svm]  # Replace with actual times
-snapml_times = [snapml_time_dtc, snapml_time_svm]  # Replace with actual times
-
+sklearn_times = [sklearn_time_dtc, sklearn_time_svm]  
+snapml_times = [snapml_time_dtc, snapml_time_svm] 
 x = np.arange(len(models))
 width = 0.35
 
@@ -230,39 +229,3 @@ plot_confusion_matrix(snapml_dt, X_test, y_test, 'Snap ML DTC')
 plot_confusion_matrix(sklearn_svm, X_test, y_test, 'Scikit-Learn SVM')
 plot_confusion_matrix(snapml_svm, X_test, y_test, 'Snap ML SVM')
 
-
-'''
-# confusion matrix
-# Predictions using predict method to get binary class labels
-# For Scikit-Learn Decision Tree
-sklearn_dt_pred_labels = sklearn_dt.predict(X_test)
-cm_sklearn = confusion_matrix(y_test, sklearn_dt_pred_labels)
-cm_sklearn_disp = ConfusionMatrixDisplay(confusion_matrix = cm_sklearn, display_labels = ['Legitimate', 'Fraud'])
-cm_sklearn_disp.plot()
-plt.title('Confusion Matrix: Scikit-Learn DTC')
-plt.show() 
-
-# For Snap ML Decision Tree
-snapml_dt_pred_labels = snapml_dt.predict(X_test)
-cm_snapml = confusion_matrix(y_test, snapml_dt_pred_labels)
-cm_snapml_disp = ConfusionMatrixDisplay(confusion_matrix = cm_snapml, display_labels = ['Legitimate', 'Fraud'])
-cm_snapml_disp.plot()
-plt.title('Confusion Matrix: Snap ML DTC')
-plt.show() 
-
-# For Scikit-Learn SVM
-sklearn_svm_pred_labels = sklearn_svm.predict(X_test)
-cm_sklearn_svm = confusion_matrix(y_test, sklearn_svm_pred_labels)
-cm_sklearn_svm_disp = ConfusionMatrixDisplay(confusion_matrix = cm_sklearn_svm, display_labels = ['Legitimate', 'Fraud'])
-cm_sklearn_svm_disp.plot()
-plt.title('Confusion Matrix: Scikit-Learn SVM')
-plt.show() 
-
-# For Snap ML SVM
-snapml_svm_pred_labels = snapml_svm.predict(X_test)
-cm_snapml_svm = confusion_matrix(y_test, snapml_svm_pred_labels)
-cm_snapml_svm_disp = ConfusionMatrixDisplay(confusion_matrix = cm_snapml_svm, display_labels = ['Legitimate', 'Fraud'])
-cm_snapml_svm_disp.plot()
-plt.title('Confusion Matrix: Snap ML SVM')
-plt.show()
-'''
