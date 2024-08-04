@@ -35,7 +35,7 @@ I wondered:
 
 3) How do different classification models compare in terms of accuracy and efficiency?
 
-The project involved using a real dataset from European cardholders' transactions in September 2013. I implemented and trained two classification models: Decision Tree and Support Vector Machine (SVM). To see how well they did, I checked their training times, ROC-AUC scores, hinge loss metrics and confusion matrices. Spoiler alert: Snap ML was super fast in training time and just as accurate as Scikit-Learn!
+I used a real dataset from European cardholders' transactions in September 2013 and implemented and trained two classification models: Decision Tree and Support Vector Machine (SVM). To see how well the models did, I checked their training times, ROC-AUC scores, hinge loss metrics and confusion matrices. Spoiler alert: Snap ML was super fast in training time and just as accurate as Scikit-Learn!
 
 Dataset:[https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud]
 
