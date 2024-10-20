@@ -41,17 +41,17 @@ Dataset:[https://www.kaggle.com/datasets/mlg-ulb/creditcardfraud]
 
 Python file: [https://github.com/yinimini/Data-analytics-projects/blob/main/Credit_card_fraud_detection/credit_card_fraud_detection.py]
 
-<img src="https://github.com/yinimini/Data-analytics-projects/blob/main/Credit_card_fraud_detection/ROC_curves.png" width="400">
+<img src="https://github.com/yinimini/Data-analytics-projects/blob/main/Credit_card_fraud_detection/Evaluation_plots/ROC_curves.png" width="400">
 
-<img src="https://github.com/yinimini/Data-analytics-projects/blob/main/Credit_card_fraud_detection/training_times.png" width="400">
+<img src="https://github.com/yinimini/Data-analytics-projects/blob/main/Credit_card_fraud_detection/Evaluation_plots/training_times.png" width="400">
 
-<img src="https://github.com/yinimini/Data-analytics-projects/blob/main/Credit_card_fraud_detection/scikitlearn.png" width="400">
+<img src="https://github.com/yinimini/Data-analytics-projects/blob/main/Credit_card_fraud_detection/Evaluation_plots/scikitlearn.png" width="400">
 
-<img src="https://github.com/yinimini/Data-analytics-projects/blob/main/Credit_card_fraud_detection/snnpml.png" width="400">
+<img src="https://github.com/yinimini/Data-analytics-projects/blob/main/Credit_card_fraud_detection/Evaluation_plots/snnpml.png" width="400">
 
-<img src="https://github.com/yinimini/Data-analytics-projects/blob/main/Credit_card_fraud_detection/scikitlearn_svm.png" width="400">
+<img src="https://github.com/yinimini/Data-analytics-projects/blob/main/Credit_card_fraud_detection/Evaluation_plots/scikitlearn_svm.png" width="400">
 
-<img src="https://github.com/yinimini/Data-analytics-projects/blob/main/Credit_card_fraud_detection/snapml_svm.png" width="400">
+<img src="https://github.com/yinimini/Data-analytics-projects/blob/main/Credit_card_fraud_detection/Evaluation_plots/snapml_svm.png" width="400">
 
 # Mental Health Disorders Analysis
 Tool: Power BI
