@@ -1,68 +1,144 @@
-import numpy as np
-import matplotlib.pyplot as plt
 import pandas as pd
+import matplotlib.pyplot as plt
+from typing import List
+
+def load_data(file_path: str) -> pd.DataFrame:
+    """
+    Load the Excel file into a Pandas DataFrame.
+
+    Args:
+        file_path (str): Path to the Excel file.
+
+    Returns:
+        pd.DataFrame: DataFrame containing the Excel data.
+    """
+    return pd.read_excel(file_path)
 
 
-symp_file = pd.read_excel("Menstration_symp.xlsx")
+def add_days_in_cycle_column(df: pd.DataFrame) -> pd.DataFrame:
+    """
+    Add a 'Days_in_cycles' column to the DataFrame that represents 
+    the day number within each cycle.
 
-df = pd.DataFrame(symp_file)
+    Args:
+        df (pd.DataFrame): DataFrame with a 'Cycle' column.
 
-#Adding days_in_cycle column into DataFrame
-cycles = df['Cycle'].tolist()
-day = 1
-#Create an empty list to store the day counts for each cycle
-cycle_days = []  
-prev_cycle = cycles[0]
+    Returns:
+        pd.DataFrame: DataFrame with the new 'Days_in_cycles' column added.
+    """
+    cycles = df['Cycle'].tolist()
+    day = 1
+    cycle_days = []  
+    prev_cycle = cycles[0]
 
-for cycle in cycles:
-    if prev_cycle == cycle:
-        cycle_days.append(day)
-    else:
-        day = 1
-        prev_cycle = cycle
-        cycle_days.append(day)
-    day += 1
+    for cycle in cycles:
+        if prev_cycle == cycle:
+            cycle_days.append(day)
+        else:
+            day = 1
+            prev_cycle = cycle
+            cycle_days.append(day)
+        day += 1
 
-df['Days_in_cycles'] = pd.DataFrame(cycle_days)
+    df['Days_in_cycles'] = pd.DataFrame(cycle_days)
+    return df
 
 
-#Visualization of recurrence of symptoms
-df.plot(x='Days_in_cycles', y=['Cramps','Tender_breasts','Low_energy','Headache', 'Abdominal_pain','Nausea'], kind='bar')
-plt.xlabel('Day in each cycle, total cycles = 7')
-plt.ylabel('1=YES, 0=NO')
-plt.title('Recurrence of symptoms')
-plt.legend()
-plt.show()
+def plot_symptom_recurrence(df: pd.DataFrame, symptoms: List[str], total_cycles: int) -> None:
+    """
+    Plot the recurrence of symptoms over days in the cycle.
 
-#Calculate probabilities of symptom occurrence
-def calculate_symps_probability(symptom_list):
-    positive_symp = []
+    Args:
+        df (pd.DataFrame): DataFrame containing symptom data.
+        symptoms (List[str]): List of symptom column names.
+        total_cycles (int): Total number of cycles to be displayed in the title.
 
-    for i in symptom_list:
-        if i == 1:
-            positive_symp.append(i)
+    Returns:
+        None
+    """
+    df.plot(x='Days_in_cycles', y=symptoms, kind='bar')
+    plt.xlabel(f'Day in each cycle, total cycles = {total_cycles}')
+    plt.ylabel('1=YES, 0=NO')
+    plt.title('Recurrence of symptoms')
+    plt.legend()
+    plt.show()
 
+
+def calculate_symptom_probability(symptom_list: pd.Series) -> float:
+    """
+    Calculate the probability of a symptom occurring in the dataset.
+
+    Args:
+        symptom_list (pd.Series): Series containing binary values representing symptom presence (1) or absence (0).
+
+    Returns:
+        float: Probability of the symptom occurrence.
+    """
+    positive_symp = [i for i in symptom_list if i == 1]
     probability = len(positive_symp) / len(symptom_list)
     return probability
 
-symp_list = df.columns.tolist()[2:] 
-print(symp_list)
 
-symp_probability_1 = []
-for i in symp_list:
-    symp_probability = calculate_symps_probability(df[i])
-    symp_probability_1.append(symp_probability)
-    print('Probability of getting', i, 'during', len(df[i]), 'days/7 cycles is', round(symp_probability,3)*100, '%')
+def calculate_and_plot_probabilities(df: pd.DataFrame, symptom_columns: List[str]) -> None:
+    """
+    Calculate and plot the probabilities of symptom occurrence.
 
-#Visualization of probabilities of symptom occurence
-plt.bar(symp_list, symp_probability_1)
-plt.xlabel('Symptoms')
-plt.ylabel('Probability')
-plt.title('Probabilities of symptom occurrence')
-plt.show()
+    Args:
+        df (pd.DataFrame): DataFrame containing symptom data.
+        symptom_columns (List[str]): List of symptom column names.
 
-Menstration_symp_1 = 'Menstration_symp_1.xlsx'
-df.to_excel(Menstration_symp_1)
+    Returns:
+        None
+    """
+    symp_probabilities = []
+    for symptom in symptom_columns:
+        probability = calculate_symptom_probability(df[symptom])
+        symp_probabilities.append(probability)
+        print(f'Probability of getting {symptom} during {len(df[symptom])} days/7 cycles is {round(probability * 100, 3)} %')
+
+    # Plotting probabilities
+    plt.bar(symptom_columns, symp_probabilities)
+    plt.xlabel('Symptoms')
+    plt.ylabel('Probability')
+    plt.title('Probabilities of symptom occurrence')
+    plt.show()
+
+
+def save_dataframe_to_excel(df: pd.DataFrame, file_path: str) -> None:
+    """
+    Save the DataFrame to an Excel file.
+
+    Args:
+        df (pd.DataFrame): DataFrame to be saved.
+        file_path (str): Path where the Excel file will be saved.
+
+    Returns:
+        None
+    """
+    df.to_excel(file_path)
+
+
+if __name__ == "__main__":
+    # Load the data
+    file_path = "Menstration_symp.xlsx"
+    df = load_data(file_path)
+
+    # Add 'Days_in_cycles' column
+    df = add_days_in_cycle_column(df)
+
+    # Define the symptoms to be analyzed
+    symptoms = ['Cramps', 'Tender_breasts', 'Low_energy', 'Headache', 'Abdominal_pain', 'Nausea']
+
+    # Plot the symptom recurrence
+    plot_symptom_recurrence(df, symptoms, total_cycles=7)
+
+    # Calculate and plot probabilities of symptom occurrence
+    calculate_and_plot_probabilities(df, symptoms)
+
+    # Save the updated DataFrame to a new Excel file
+    save_path = "Menstration_symp.xlsx"
+    save_dataframe_to_excel(df, save_path)
+
 
 
 
