@@ -8,11 +8,13 @@ Tool: Python
 
 I wondered: 
 
-1) What symptoms am I getting during my cycles and when am I getting them in the cycles?
+1) What symptoms am I getting during my cycles and is there any correlation between these symtopms? Like does headache often come together with cramps?
 
 2) How long are my cycles and are the durations in the 'normal' range?
 
-3) What's the probabilities of getting the symptoms again? 
+3) What symptoms am I getting for each day in the future cycles? 
+
+The motivation back this project is that I don't want to pay more money for the menstration tracking APP Flow. I was thinking I am a data science background, why don't I do it myself, it doesn't cost anything. So here you are :) 
 
 I collected and modified the raw data, and visualized the answers to my questions with Python. The analysis focuses on the duration of cycles and periods, as well as the recurrence of symptoms. Probabilities of symptom occurrence are also calculated:
 
@@ -34,6 +36,8 @@ I wondered:
 2) Which library is faster and better for this task: Scikit-Learn or Snap ML?
 
 3) How do different classification models compare in terms of accuracy and efficiency?
+
+The motivation back this project was purely me wanting to get more familiar with how to deal with inbalanced datasets, evaluation metrices and etc. I'm interested in ML application in finance, that's why I picked out these data. 
 
 I used a real dataset from European cardholders' transactions in September 2013 and implemented and trained two classification models: Decision Tree and Support Vector Machine (SVM). To see how well the models did, I checked their training times, ROC-AUC scores, hinge loss metrics and confusion matrices. Spoiler alert: Snap ML was super fast in training time and just as accurate as Scikit-Learn!
 
