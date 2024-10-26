@@ -92,8 +92,7 @@ class DataExplorer:
         data_with_critical_features = self.data[critical_features]
         plt.figure(figsize=(12, 8))
         sns.heatmap(data_with_critical_features.corr(), annot=True, fmt=".2f", cmap='coolwarm', square=True)
-        symptoms_correlation_heatmap = 'Heatmap of Symptoms Correlations'
-        plt.title(symptoms_correlation_heatmap)
+        plt.title('Heatmap of Symptoms Correlations')
         plt.savefig(output_path_plot)
         plt.show()
         
