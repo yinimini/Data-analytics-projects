@@ -1,6 +1,8 @@
 import pandas as pd
 import matplotlib.pyplot as plt
-from typing import List
+import matplotlib.patches as mpatches
+import missingno as msno
+import seaborn as sns
 
 def load_data(file_path: str) -> pd.DataFrame:
     """
@@ -12,132 +14,103 @@ def load_data(file_path: str) -> pd.DataFrame:
     Returns:
         pd.DataFrame: DataFrame containing the Excel data.
     """
-    return pd.read_excel(file_path)
+    raw_data = pd.read_csv(file_path)
+    print(raw_data.info)
+    return raw_data
 
+critical_features = [ 
+    'Cramps', 
+    'Tender_breasts', 
+    'Low_energy', 
+    'Backache', 
+    'Headache', 
+    'Acne', 
+    'Insomnia', 
+    'Vaginal_itching', 
+    'Vaginal_dryness', 
+    'Nausea', 'Bloating', 
+    'Diarrhea', 
+]
 
-def add_days_in_cycle_column(df: pd.DataFrame) -> pd.DataFrame:
-    """
-    Add a 'Days_in_cycles' column to the DataFrame that represents 
-    the day number within each cycle.
+class DataExplorer:
+    def __init__(self, data: pd.DataFrame):
+        """Initialize with a pandas DataFrame."""
+        self.data = data
 
-    Args:
-        df (pd.DataFrame): DataFrame with a 'Cycle' column.
+    def missing_values_summary(self) -> pd.Series:
+        """Get summary of missing values in the raw dataset.
 
-    Returns:
-        pd.DataFrame: DataFrame with the new 'Days_in_cycles' column added.
-    """
-    cycles = df['Cycle'].tolist()
-    day = 1
-    cycle_days = []  
-    prev_cycle = cycles[0]
+        Returns:
+            pd.Series: Summary of missing values.
+        """
+        missing_summary = self.data.isnull().sum()
+        print(f'The information about missing values in the raw data is:\n{missing_summary}')
+        return missing_summary
 
-    for cycle in cycles:
-        if prev_cycle == cycle:
-            cycle_days.append(day)
-        else:
-            day = 1
-            prev_cycle = cycle
-            cycle_days.append(day)
-        day += 1
+    def plot_missing_values_matrix(self, output_path_plot:str):
+        """Visualize missing values.
+        Args:
+            output_path_path (str): Output path for where the plot is going to be. 
+        """
+        msno.matrix(self.data, sparkline=False, figsize=(8, 6), fontsize=11, color=(0.7, 0.57, 0.47))
+        gray_patch = mpatches.Patch(color='#B29177', label='Data present')
+        white_patch = mpatches.Patch(color='white', label='Data absent')
+        plt.legend(handles=[gray_patch, white_patch], fontsize=10)
+        plt.title('Missing Values Matrix')
+        plt.savefig(output_path_plot)
+        plt.show()
+        
 
-    df['Days_in_cycles'] = pd.DataFrame(cycle_days)
-    return df
+    def data_summary(self) -> pd.DataFrame:
+        """Get summary of raw data
 
+        Returns:
+            pd.DataFrame: Summary of raw data contaning info like count, mean,
+            std, min and etc.
+        """
+        summary = self.data.describe()
+        print(f'Summary of raw data:\n{summary}')
+        return summary
 
-def plot_symptom_recurrence(df: pd.DataFrame, symptoms: List[str], total_cycles: int) -> None:
-    """
-    Plot the recurrence of symptoms over days in the cycle.
+    def column_names(self) -> list[str]:
+        """Retrieve all the columns in the raw dataset
 
-    Args:
-        df (pd.DataFrame): DataFrame containing symptom data.
-        symptoms (List[str]): List of symptom column names.
-        total_cycles (int): Total number of cycles to be displayed in the title.
+        Returns:
+            list[str]: All the columns in the dataset
+        """
+        names = self.data.columns.tolist()
+        print(f'Raw data has these columns:\n{names}')
+        return names
 
-    Returns:
-        None
-    """
-    df.plot(x='Days_in_cycles', y=symptoms, kind='bar')
-    plt.xlabel(f'Day in each cycle, total cycles = {total_cycles}')
-    plt.ylabel('1=YES, 0=NO')
-    plt.title('Recurrence of symptoms')
-    plt.legend()
-    plt.show()
+    def plot_heatmap(self, critical_features:list[str], output_path_plot:str):
+        """Visualization of symptions correlations
 
+        Args:
+            critical_features (list[str]): Critical features for menstrual cycle.
+            output_path_path (str): Output path for where the plot is going to be. 
+        """
+        data_with_critical_features = self.data[critical_features]
+        plt.figure(figsize=(12, 8))
+        sns.heatmap(data_with_critical_features.corr(), annot=True, fmt=".2f", cmap='coolwarm', square=True)
+        plt.title('Heatmap of Symptoms Correlations')
+        plt.savefig(output_path_plot)
+        plt.show()
+        
 
-def calculate_symptom_probability(symptom_list: pd.Series) -> float:
-    """
-    Calculate the probability of a symptom occurring in the dataset.
-
-    Args:
-        symptom_list (pd.Series): Series containing binary values representing symptom presence (1) or absence (0).
-
-    Returns:
-        float: Probability of the symptom occurrence.
-    """
-    positive_symp = [i for i in symptom_list if i == 1]
-    probability = len(positive_symp) / len(symptom_list)
-    return probability
-
-
-def calculate_and_plot_probabilities(df: pd.DataFrame, symptom_columns: List[str]) -> None:
-    """
-    Calculate and plot the probabilities of symptom occurrence.
-
-    Args:
-        df (pd.DataFrame): DataFrame containing symptom data.
-        symptom_columns (List[str]): List of symptom column names.
-
-    Returns:
-        None
-    """
-    symp_probabilities = []
-    for symptom in symptom_columns:
-        probability = calculate_symptom_probability(df[symptom])
-        symp_probabilities.append(probability)
-        print(f'Probability of getting {symptom} during {len(df[symptom])} days/7 cycles is {round(probability * 100, 3)} %')
-
-    # Plotting probabilities
-    plt.bar(symptom_columns, symp_probabilities)
-    plt.xlabel('Symptoms')
-    plt.ylabel('Probability')
-    plt.title('Probabilities of symptom occurrence')
-    plt.show()
-
-
-def save_dataframe_to_excel(df: pd.DataFrame, file_path: str) -> None:
-    """
-    Save the DataFrame to an Excel file.
-
-    Args:
-        df (pd.DataFrame): DataFrame to be saved.
-        file_path (str): Path where the Excel file will be saved.
-
-    Returns:
-        None
-    """
-    df.to_excel(file_path)
 
 
 if __name__ == "__main__":
-    # Load the data
-    file_path = "Menstration_symp.xlsx"
-    df = load_data(file_path)
+    file_path = "Menstration_symp_1.csv"
+    raw_data = load_data(file_path)
+    explorer = DataExplorer(raw_data)
+    explorer.missing_values_summary()
+    explorer.plot_missing_values_matrix('/Users/Yini Chen/Documents/Data-analytics-projects/Menstrual_cycle_analysis/Plots/missing_values_plot.jpeg')
+    explorer.data_summary()
+    explorer.column_names()
+    explorer.plot_heatmap(critical_features, '/Users/Yini Chen/Documents/Data-analytics-projects/Menstrual_cycle_analysis/Plots/symptoms_correlation_heatmap.jpeg')
+    
 
-    # Add 'Days_in_cycles' column
-    df = add_days_in_cycle_column(df)
 
-    # Define the symptoms to be analyzed
-    symptoms = ['Cramps', 'Tender_breasts', 'Low_energy', 'Headache', 'Abdominal_pain', 'Nausea']
-
-    # Plot the symptom recurrence
-    plot_symptom_recurrence(df, symptoms, total_cycles=7)
-
-    # Calculate and plot probabilities of symptom occurrence
-    calculate_and_plot_probabilities(df, symptoms)
-
-    # Save the updated DataFrame to a new Excel file
-    save_path = "Menstration_symp.xlsx"
-    save_dataframe_to_excel(df, save_path)
 
 
 

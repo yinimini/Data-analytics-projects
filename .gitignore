@@ -1,7 +1,8 @@
 
 # Ignore datasets of menstrual cycle 
 Menstrual_cycle_analysis/Menstration_log.xlsx
-Menstrual_cycle_analysis/Menstration_symp.xlsx
+Menstration_symp_1.csv
+Menstration_symp.xlsx
 
 # Ignore virtual environment
 .venv
