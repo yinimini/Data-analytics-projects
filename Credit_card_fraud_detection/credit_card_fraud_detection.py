@@ -16,11 +16,11 @@ def load_data(file_path: str) -> pd.DataFrame:
     """
     Load the credit card fraud dataset from a CSV file.
 
-    Parameters:
-    - file_path: Path to the CSV file.
+    Args:
+    - file_path(str): Path to the CSV file.
 
     Returns:
-    - DataFrame containing the dataset.
+    - data(pd.DataFrame): DataFrame containing the dataset.
     """
     data = pd.read_csv(file_path)
     print(f"There are {len(data)} observations in the credit card fraud dataset.")
@@ -32,9 +32,9 @@ def inflate_dataset(data: pd.DataFrame, factor: int = 10) -> pd.DataFrame:
     """
     Inflate the dataset by repeating each observation.
 
-    Parameters:
-    - data: DataFrame to be inflated.
-    - factor: Number of times to repeat each observation.
+    Args:
+    - data(pd.DataFrame): DataFrame to be inflated.
+    - factor(int): Number of times to repeat each observation.
 
     Returns:
     - Inflated DataFrame.
@@ -46,8 +46,8 @@ def plot_target_distribution(data: pd.DataFrame) -> None:
     """
     Plot the distribution of the target variable.
 
-    Parameters:
-    - data: DataFrame containing the dataset.
+    Args:
+    - data(pd.DataFrame): DataFrame containing the dataset.
     """
     labels = data.Class.unique()
     sizes = data.Class.value_counts().values
@@ -62,8 +62,8 @@ def plot_transaction_amounts(data: pd.DataFrame) -> None:
     """
     Plot histogram of transaction amounts and display some statistics.
 
-    Parameters:
-    - data: DataFrame containing the dataset.
+    Args:
+    - data(pd.DataFrame): DataFrame containing the dataset.
     """
     plt.hist(data.Amount.values, bins=6)
     plt.show()
@@ -77,11 +77,11 @@ def preprocess_data(data: pd.DataFrame) -> tuple[np.ndarray, np.ndarray]:
     """
     Preprocess the dataset by scaling features and normalizing.
 
-    Parameters:
-    - data: DataFrame containing the dataset.
+    Args:
+    - data(pd.DataFrame): DataFrame containing the dataset.
 
     Returns:
-    - Tuple containing the feature matrix and target vector.
+    - X, y(tuple) Tuple containing the feature matrix and target vector.
     """
     data.iloc[:, 1:30] = StandardScaler().fit_transform(data.iloc[:, 1:30])
     X = normalize(data.values[:, 1:30], norm='l1')
@@ -94,12 +94,12 @@ def split_data(X: np.ndarray, y: np.ndarray) -> tuple[np.ndarray, np.ndarray, np
     """
     Split the data into training and test sets.
 
-    Parameters:
-    - X: Feature matrix.
-    - y: Target vector.
+    Args:
+    - X(np.ndarray): Feature matrix.
+    - y(np.ndarray): Target vector.
 
     Returns:
-    - Tuple containing training and test sets for features and target.
+    - X_train, X_test, y_train, y_test(tuple): Tuple containing training and test sets for features and target.
     """
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42, stratify=y)
     print(f'X_train.shape={X_train.shape}, Y_train.shape={y_train.shape}')
@@ -111,11 +111,11 @@ def compute_class_weights(y_train: np.ndarray) -> np.ndarray:
     """
     Compute class weights for the training set.
 
-    Parameters:
-    - y_train: Target vector for the training set.
+    Args:
+    - y_train(np.ndarray): Target vector for the training set.
 
     Returns:
-    - Array of computed sample weights.
+    - w_train(np.ndarray):Array of computed sample weights.
     """
     w_train = compute_sample_weight('balanced', y_train)
     print("Class distribution in the training set:")
@@ -127,13 +127,13 @@ def train_decision_tree(X_train: np.ndarray, y_train: np.ndarray, w_train: np.nd
     """
     Train Decision Tree classifiers using Scikit-Learn and Snap ML.
 
-    Parameters:
-    - X_train: Training features.
-    - y_train: Training target.
-    - w_train: Sample weights for the training set.
+    Args:
+    - X_train(np.ndarray): Training features.
+    - y_train(np.ndarray): Training target.
+    - w_train(np.ndarray): Sample weights for the training set.
 
     Returns:
-    - Tuple containing the trained Scikit-Learn and Snap ML Decision Trees.
+    - sklearn_dt, snapml_dt, sklearn_time_dtc, snapml_time_dtc (Tuple):Tuple containing the trained Scikit-Learn and Snap ML Decision Trees.
     """
     # Train a Decision Tree Classifier using Scikit-Learn
     sklearn_dt = DecisionTreeClassifier(max_depth=4, random_state=35)
@@ -156,13 +156,13 @@ def evaluate_model(model, X_test: np.ndarray, y_test: np.ndarray) -> float:
     """
     Evaluate the model using ROC-AUC score.
 
-    Parameters:
+    Args:
     - model: The trained model to evaluate.
-    - X_test: Test features.
-    - y_test: Test target.
+    - X_test(np.ndarray): Test features.
+    - y_test(np.ndarray): Test target.
 
     Returns:
-    - ROC-AUC score.
+    - roc_auc(float): ROC-AUC score.
     """
     predictions = model.predict_proba(X_test)[:, 1]
     roc_auc = roc_auc_score(y_test, predictions)
@@ -173,9 +173,9 @@ def train_svm(X_train: np.ndarray, y_train: np.ndarray) -> tuple:
     """
     Train SVM classifiers using Scikit-Learn and Snap ML.
 
-    Parameters:
-    - X_train: Training features.
-    - y_train: Training target.
+    Argss:
+    - X_train(np.ndarray): Training features.
+    - y_train(np.ndarray): Training target.
 
     Returns:
     - Tuple containing the trained Scikit-Learn and Snap ML SVM models.
@@ -201,10 +201,10 @@ def plot_roc_curve(y_score: np.ndarray, y_test: np.ndarray, label: str) -> None:
     """
     Plot ROC curve for a given model.
 
-    Parameters:
-    - y_score: Predicted scores or probabilities.
-    - y_test: True labels.
-    - label: Label for the curve.
+    Args:
+    - y_score(np.ndarray): Predicted scores or probabilities.
+    - y_test(np.ndarray): True labels.
+    - label(str): Label for the curve.
     """
     fpr, tpr, _ = roc_curve(y_test, y_score)
     roc_auc = auc(fpr, tpr)
@@ -215,9 +215,9 @@ def plot_training_time_comparison(sklearn_times: list, snapml_times: list, model
     """
     Plot a comparison of training times between Scikit-Learn and Snap ML.
 
-    Parameters:
-    - sklearn_times: List of training times for Scikit-Learn.
-    - snapml_times: List of training times for Snap ML.
+    Args:
+    - sklearn_times(list): List of training times for Scikit-Learn.
+    - snapml_times(list): List of training times for Snap ML.
     - models: List of model names.
     """
     x = np.arange(len(models))
@@ -239,11 +239,11 @@ def plot_confusion_matrix(model, X_test: np.ndarray, y_test: np.ndarray, model_n
     """
     Plot confusion matrix for the given model and test data.
 
-    Parameters:
+    Args:
     - model: The trained model
-    - X_test: Features of the test set
-    - y_test: True labels of the test set
-    - model_name: The name of the model (for the plot title)
+    - X_test(np.ndarray): Features of the test set
+    - y_test(np.ndarray): True labels of the test set
+    - model_name(str): The name of the model (for the plot title)
     """
     y_pred = model.predict(X_test)
     cm = confusion_matrix(y_test, y_pred)
