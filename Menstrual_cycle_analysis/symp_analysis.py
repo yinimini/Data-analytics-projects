@@ -47,15 +47,19 @@ class DataExplorer:
         print(f'The information about missing values in the raw data is:\n{missing_summary}')
         return missing_summary
 
-    def plot_missing_values_matrix(self):
+    def plot_missing_values_matrix(self, output_path_plot:str):
         """Visualize missing values.
+        Args:
+            output_path_path (str): Output path for where the plot is going to be. 
         """
         msno.matrix(self.data, sparkline=False, figsize=(8, 6), fontsize=11, color=(0.7, 0.57, 0.47))
         gray_patch = mpatches.Patch(color='#B29177', label='Data present')
         white_patch = mpatches.Patch(color='white', label='Data absent')
         plt.legend(handles=[gray_patch, white_patch], fontsize=10)
         plt.title('Missing Values Matrix')
+        plt.savefig(output_path_plot)
         plt.show()
+        
 
     def data_summary(self) -> pd.DataFrame:
         """Get summary of raw data
@@ -100,7 +104,7 @@ if __name__ == "__main__":
     raw_data = load_data(file_path)
     explorer = DataExplorer(raw_data)
     explorer.missing_values_summary()
-    explorer.plot_missing_values_matrix()
+    explorer.plot_missing_values_matrix('/Users/Yini Chen/Documents/Data-analytics-projects/Menstrual_cycle_analysis/Plots/missing_values_plot.jpeg')
     explorer.data_summary()
     explorer.column_names()
     explorer.plot_heatmap(critical_features, '/Users/Yini Chen/Documents/Data-analytics-projects/Menstrual_cycle_analysis/Plots/symptoms_correlation_heatmap.jpeg')
