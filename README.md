@@ -23,8 +23,8 @@ Code file 1:[https://github.com/yinimini/Data-analysis-projects/blob/main/Menstr
 Code file 2:[https://github.com/yinimini/Data-analysis-projects/blob/main/Menstrual_cycle_analysis/symp_analysis.py]
 
  <img src="https://github.com/yinimini/Data-analysis-projects/assets/32144515/2a6e4681-1a51-4b51-951a-bb8181fa56b9" width="500">
- <img src="https://github.com/yinimini/Data-analysis-projects/assets/32144515/9079f102-9149-48bb-b96b-a2d92b0fa582" width="500">
- <img src="https://github.com/yinimini/Data-analysis-projects/assets/32144515/2f8d5179-62d0-40fb-b715-b1a454b2750b" width="500">
+ <img src="https://github.com/yinimini/Data-analytics-projects/blob/main/Menstrual_cycle_analysis/Plots/missing_values_plot.jpeg" width="500">
+ <img src="https://github.com/yinimini/Data-analytics-projects/blob/main/Menstrual_cycle_analysis/Plots/symptoms_correlation_heatmap.jpeg" width="500">
 
 # Credit Card Fraud Detection 
 Tool: Python
