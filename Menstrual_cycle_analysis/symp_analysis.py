@@ -50,10 +50,10 @@ class DataExplorer:
     def plot_missing_values_matrix(self):
         """Visualize missing values.
         """
-        msno.matrix(self.data, sparkline=False, figsize=(16, 8), fontsize=11, color=(0.7, 0.57, 0.47))
+        msno.matrix(self.data, sparkline=False, figsize=(8, 6), fontsize=11, color=(0.7, 0.57, 0.47))
         gray_patch = mpatches.Patch(color='#B29177', label='Data present')
         white_patch = mpatches.Patch(color='white', label='Data absent')
-        plt.legend(loc=[1.05, 0.7], handles=[gray_patch, white_patch], fontsize=16)
+        plt.legend(handles=[gray_patch, white_patch], fontsize=10)
         plt.title('Missing Values Matrix')
         plt.show()
 
