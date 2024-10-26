@@ -109,17 +109,6 @@ if __name__ == "__main__":
     explorer.column_names()
     explorer.plot_heatmap(critical_features, '/Users/Yini Chen/Documents/Data-analytics-projects/Menstrual_cycle_analysis/Plots/symptoms_correlation_heatmap.jpeg')
     
-    # # Add 'Days_in_cycles' column
-    # df = add_days_in_cycle_column(df)
-
-    # # Define the symptoms to be analyzed
-    # symptoms = ['Cramps', 'Tender_breasts', 'Low_energy', 'Headache', 'Abdominal_pain', 'Nausea']
-
-    # # Plot the symptom recurrence
-    # plot_symptom_recurrence(df, symptoms, total_cycles=7)
-
-    # # Calculate and plot probabilities of symptom occurrence
-    # calculate_and_plot_probabilities(df, symptoms)
 
 
 
