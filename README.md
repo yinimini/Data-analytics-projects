@@ -3,7 +3,7 @@ About me: Just a curious girl who tries to find answers in data, I mainly use Py
 
 Here are some of the projects that I have picked out:
 
-# Menstrual cycle analysis
+# Menstrual cycle analysis - Ongoing
 Tool: Python
 
 I wondered: 
@@ -16,7 +16,7 @@ I wondered:
 
 The motivation behind this project is that I don't want to pay more money for the menstration tracking APP Flow. I was thinking I am a data scientist, why don't I do it myself, it doesn't cost anything. So here we are :) 
 
-I collected and modified the raw data, and visualized the answers to my questions with Python. The analysis focuses on the duration of cycles and periods, as well as the recurrence of symptoms. Probabilities of symptom occurrence are also calculated:
+I collected and modified the raw data, and visualized the answers to my questions with Python. The analysis focuses on the duration of cycles and periods and prediction of the future symptoms.
 
 Code file 1:[https://github.com/yinimini/Data-analysis-projects/blob/main/Menstrual_cycle_analysis/Cycle_length.py]
 
