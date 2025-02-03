@@ -5,5 +5,6 @@ Menstration_symp_1.csv
 Menstration_symp.xlsx
 
 # Ignore virtual environment
+venv
 .venv
 .env
