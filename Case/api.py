@@ -59,3 +59,9 @@ engine = create_engine(db_url)
     
 df_flattened.to_sql('veg_data', engine, if_exists='replace', index=False)
 
+
+# ------------------------------- #
+# Read csv file
+
+hendelser_df = pd.read_csv("hendelser.csv")
+print(hendelser_df)
