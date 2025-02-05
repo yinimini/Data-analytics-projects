@@ -8,3 +8,6 @@ Menstration_symp.xlsx
 venv
 .venv
 .env
+
+# Ignore dataset
+Case/hendelser.csv
