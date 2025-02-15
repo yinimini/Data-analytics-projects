@@ -12,7 +12,6 @@ url = "https://nvdbapiles-v3.atlas.vegvesen.no/vegobjekter/915?inkluder=egenskap
 
 response = requests.get(url, timeout=20)
 
-
 data = response.json()  
 
 df = pd.DataFrame(data, columns=["objekter"])
@@ -60,8 +59,3 @@ engine = create_engine(db_url)
 df_flattened.to_sql('veg_data', engine, if_exists='replace', index=False)
 
 
-# ------------------------------- #
-# Read csv file
-
-hendelser_df = pd.read_csv("hendelser.csv")
-print(hendelser_df)
